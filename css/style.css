@@ -96,7 +96,6 @@ h1, h2 ,h3,h4, h5, h6{
     margin: 180px 0 40px;
    font-family:  'Open Sans', sans-serif; 
    font-size: 60px;
-   /* line-height: 1.1; */
    color: #fff;
    font-weight: 600;
    text-align: center;
@@ -112,7 +111,6 @@ h1, h2 ,h3,h4, h5, h6{
     justify-content: center;
     margin: 105px auto 0;
     position: relative;
-    
 }
 
 /* Button */
@@ -125,22 +123,37 @@ h1, h2 ,h3,h4, h5, h6{
     text-decoration: none;
     text-align: center;
     line-height: 70px;
-    padding:auto;
+    /* padding:auto; */
     cursor: pointer;
     color: #fff;
     border: 3px solid #fff;
     width: 220px;
     height: 70px;
     margin: 0 15px;
-    /* font-family: inherit; */
     transition: background .1s linear;
-    transition: border-color .1s linear;
+    transition: border .1s linear;
+    transition: color .1s linear;
 }
 .btn:hover{
     background-color: #00897b;
     border-color: #00897b;
 }
-
+.btn--services{
+    width:150px;
+    height: 50px;
+    margin:45px auto;
+    border: 2px solid #212121;
+    background: #fff center no-repeat;
+    padding: 0;
+    line-height: 46px;
+}
+.btn__txt{
+    font-family:  'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: #212121;
+}
 /* About us */
 .about{
     margin: 125px 0;
@@ -190,4 +203,70 @@ h1, h2 ,h3,h4, h5, h6{
     line-height: 1.45;
     color:#212121;
     margin:0 auto;
+}
+/* Section */
+.section--green{
+    background: #e4fdf9 center no-repeat;
+    padding:50px 0 105px;
+}
+.section__header{
+    width: 100%;
+    max-width: 630px;
+    margin:125px auto 100px;
+    text-align: center;
+    font-family:  'Open Sans', sans-serif;
+}
+.section__title{
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 37px;
+}
+.section__suptitle{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.45;
+}
+/* Our Services */
+.services{
+    display: flex;
+    flex-wrap: wrap;
+}
+.services__item{
+    background: #fff center no-repeat;
+    width: 30.7162%;
+    text-align: center;
+    margin:15px 15px;
+    color: #212121;
+}
+.services__item:hover{
+    background: #00897b center no-repeat;
+    color: #fff;
+}
+.services__img{
+    margin:60px auto 40px;
+    filter: invert(1);
+}
+.services__title{
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    padding:0 auto; 
+}
+.services__text{
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    padding:25px 50px;
+    line-height: 1.66;
+}
+.services__item:hover .btn--services{
+    border-color:#fff;
+    background: #00897b center no-repeat;
+}
+.services__item:hover .btn__txt{
+    color:#fff;
+}
+.services__item:hover img{
+    filter: invert(1);
 }
