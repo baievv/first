@@ -130,9 +130,9 @@ h1, h2 ,h3,h4, h5, h6{
     width: 220px;
     height: 70px;
     margin: 0 15px;
-    transition: background .1s linear;
-    transition: border .1s linear;
-    transition: color .1s linear;
+    transition: background .2s linear;
+    transition: border .2s linear;
+    transition: color .2s linear;
 }
 .btn:hover{
     background-color: #00897b;
@@ -153,6 +153,22 @@ h1, h2 ,h3,h4, h5, h6{
     font-size: 20px;
     text-align: center;
     color: #212121;
+}
+.btn--works{
+    width: 175px;
+    height: 55px;
+    background: #fff center no-repeat;
+    border: 2px solid #00897b;
+    line-height: 51px;
+}
+.btn--works:first-child{
+    width: 100px;
+}
+.btn--works:hover{
+    background: #00897b center no-repeat;
+}
+.btn--works:hover span{
+    color:#fff;
 }
 /* About us */
 .about{
@@ -208,6 +224,9 @@ h1, h2 ,h3,h4, h5, h6{
 .section--green{
     background: #e4fdf9 center no-repeat;
     padding:50px 0 105px;
+}
+.section--works{
+    background: #fff center no-repeat;
 }
 .section__header{
     width: 100%;
@@ -269,4 +288,83 @@ h1, h2 ,h3,h4, h5, h6{
 }
 .services__item:hover img{
     filter: invert(1);
+}
+/* Works */
+
+.works__buttons{
+    margin:15px auto;
+    display: flex;
+    width: 690px;
+    justify-content: space-between;
+}
+.works__card{
+    margin:105px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.works__item{
+    background-color: #212121 center no-repeat;
+    width: 30.7162%;
+    text-align: center;
+    margin:15px 15px;
+    position: relative;
+}
+.works__item:after { 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);  
+    opacity: 0;
+}
+.works__item:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background: url(icon-path); */
+    opacity: 0;
+}
+.works__item:hover:before,
+.works__item:hover:after{
+    opacity: 1;
+}
+.works__item:hover .works__text{
+    opacity:1;
+    cursor: pointer;
+    color: #fff;
+}
+.works__item img{
+    width: 100%;
+    height: auto;
+}
+.works__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 2;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .1s linear;
+    font-family:  'Open Sans', sans-serif;
+}
+.works__title{  
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.1;
+}
+.works__subtitle{
+    margin-top:5px auto;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.46;
 }
