@@ -126,10 +126,12 @@ h1, h2 ,h3,h4, h5, h6{
     /* padding:auto; */
     cursor: pointer;
     color: #fff;
-    border: 3px solid #fff;
+    border: 3px solid #212121;
+    background-color: #fff;
     width: 220px;
     height: 70px;
     margin: 0 15px;
+    padding: 0;
     transition: background .2s linear;
     transition: border .2s linear;
     transition: color .2s linear;
@@ -137,6 +139,14 @@ h1, h2 ,h3,h4, h5, h6{
 .btn:hover{
     background-color: #00897b;
     border-color: #00897b;
+    color: #fff;
+}
+.btn:hover span{
+    color: #fff;
+}
+.btn--intro{
+    border: 3px solid #fff;
+    background-color: rgba(0,0,0,0);
 }
 .btn--services{
     width:150px;
@@ -153,11 +163,12 @@ h1, h2 ,h3,h4, h5, h6{
     font-size: 20px;
     text-align: center;
     color: #212121;
+    margin:auto auto;
 }
 .btn--works{
     width: 175px;
     height: 55px;
-    background: #fff center no-repeat;
+    background-color: #fff;
     border: 2px solid #00897b;
     line-height: 51px;
 }
@@ -308,6 +319,7 @@ h1, h2 ,h3,h4, h5, h6{
     text-align: center;
     margin:15px 15px;
     position: relative;
+    overflow: hidden;
 }
 .works__item:after { 
     content: '';
@@ -367,4 +379,11 @@ h1, h2 ,h3,h4, h5, h6{
     font-weight: 600;
     font-size: 15px;
     line-height: 1.46;
+}
+.works__button{
+    margin: 25px auto 135px;
+}
+.works__button .btn{
+    display: flex;
+    margin: 0 auto;
 }
