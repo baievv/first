@@ -760,10 +760,8 @@ h1, h2 ,h3,h4, h5, h6,p{
 }
 /* Feedback */
 .feedback{
-    /* display: flex;
-    flex-wrap: wrap; */
     width:100%;
-    padding:0 70px 110px 70px;
+    padding:0 70px 110px;
 }
 .feedback__inner{
     display: flex;
@@ -771,8 +769,8 @@ h1, h2 ,h3,h4, h5, h6,p{
     justify-content: space-between;
 }
 .feedback__field{
-    display: block;
-    width:500px;
+    display: inline-block;
+    width: 48.5%;
     height: 84px;
     border-radius: 10px;
     background-color: #fff;
