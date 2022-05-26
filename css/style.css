@@ -472,7 +472,7 @@ h1, h2 ,h3,h4, h5, h6,p{
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 .price__inner{
-    position: relative;
+    /* position: relative; */
     display: block;
     width: 100%;
     background: url("../img/price/1.png") no-repeat;
@@ -483,7 +483,7 @@ h1, h2 ,h3,h4, h5, h6,p{
     color: #fff;
 }
 .price__type{
-    position: absolute; 
+    /* position: absolute;  */
     width: 100%;
     margin-top: 45px;
     font-size: 25px;
@@ -491,21 +491,24 @@ h1, h2 ,h3,h4, h5, h6,p{
     text-align: center;
 }
 .price__block{
-    position: absolute;
-    width: 50%;
+    /* display: flex;
+    flex-direction: row; */
+    width: 70%;
     text-align: center;
-    left: 50%;
-    transform: translatex(-50%);
-    margin-top: 105px;
+    margin: 40px auto 0;
 }
 .price__money{
+    position: relative;
+    display:inline;
     font-size: 50px;
     font-weight: 400;
+    text-align: center;
+    line-height: 1;
 }
 .price__money:before{
     content: '$';
     position: absolute;
-    left:-5px;
+    left:-15px;
     top:10px;
     font-size: 25px;
     font-weight: 600;
@@ -632,37 +635,41 @@ h1, h2 ,h3,h4, h5, h6,p{
     color:#3949ab;
 }
 /* Blog */
-.blog{
-  margin-bottom: 125px;
-}
-.blog__item{
+.blog__item{  
     display: flex;
-    flex-direction: row-reverse;
-    max-width: 100%;
-    /* justify-content: space-between; */
-    /* padding-left: 30px; */
+    flex-wrap: wrap;
+    width: 100%;
+    margin:0 -15px;
 }
-.blog__item:first-child,
-.blog__item:last-child{
-    flex-direction: row;
-    padding-left: 0px;
-}
-.blog__item:first-child .blog__content,
-.blog__item:last-child .blog__content{
-    margin-left: 30px;
+.blog__photo{
+    padding:0 15px;
+    width: 50%;
+    height: 400px;
+    position: relative;
 }
 .blog__img{
-    display:block;
-    /* width: 570px; */
-    max-width: 100%;
-    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
 }
 .blog__content{
-    margin-top: 60px;
+    display:flex;
+    flex-direction: column;
+    margin: 60px 0 0 ;
+    width: 50%;
     font-family:  'Open Sans', sans-serif;
     color: #212121;
-    /* margin-left: 30px; */
-    padding-right: 135px;
+    /* padding-right: 135px; */
+    padding-left: 30px;
+}
+.blog__item--reverse .blog__photo .blog__img{
+    padding: 0;
+    margin:0;
+    left:35px;
+}
+.blog__item--reverse .blog__content{
+    padding: 0 15px;
 }
 .blog__title{
     font-weight: 700;
@@ -693,9 +700,11 @@ h1, h2 ,h3,h4, h5, h6,p{
     font-size: 15px;
     font-weight: 400;
     line-height: 1.46;
+    width: 70%;
 }
 .blog__button{
     text-align: center;
+    margin-top: 125px;
 }
 /* Contacts */
 .contacts{
